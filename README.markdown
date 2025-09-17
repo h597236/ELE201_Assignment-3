@@ -91,4 +91,5 @@
 ```
 
 ### Demo Video
-<video src="Media/reaction_game.mp4" controls width="600"></video>
+[![Reaction Game Demo](https://img.youtube.com/vi/uce8lnO9HEw/0.jpg)](https://www.youtube.com/watch?v=uce8lnO9HEw)
+
