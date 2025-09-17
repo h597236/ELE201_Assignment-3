@@ -1,18 +1,10 @@
-# STM32F767 Embedded Systems Projects
-
-This repository contains two embedded systems projects implemented on the **STM32F767** microcontroller: a **Traffic Light System** and a **Reaction Time Game**. Both projects utilize GPIO pins to control LEDs and buttons, demonstrating real-time control and interrupt handling.
+# Assignement - 2
 
 ## Table of Contents
 - [Project 1: Traffic Light System](#project-1-traffic-light-system)
 - [Project 2: Reaction Time Game](#project-2-reaction-time-game)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [License](#license)
 
 ## Project 1: Traffic Light System
-
-### Overview
-The Traffic Light System simulates a standard traffic light sequence with red, yellow, and green phases, including a pedestrian button to modify the sequence. The system runs in an infinite loop.
 
 ### Features
 - **Standard Traffic Light Sequence**:
@@ -54,9 +46,6 @@ The Traffic Light System simulates a standard traffic light sequence with red, y
 *(Link to demo video will be added here)*
 
 ## Project 2: Reaction Time Game
-
-### Overview
-The Reaction Time Game is a competitive two-player game where players press a button as quickly as possible after a reflex LED (LD3) activates. The system detects false starts and indicates the winner via LEDs.
 
 ### Features
 - **Random Timing**: Reflex LED (LD3) activates randomly within 3–20 seconds.
@@ -103,27 +92,6 @@ The Reaction Time Game is a competitive two-player game where players press a bu
 
 ### Demo Video
 *(Link to demo video will be added here)*
-
-## Prerequisites
-- **Hardware**:
-  - STM32F767 microcontroller board.
-  - LEDs (red, yellow, green for Project 1; red, two others for Project 2).
-  - Push buttons (1 for Project 1, 2 for Project 2).
-  - Resistors for LEDs (e.g., 330Ω) and pull-up/pull-down resistors for buttons.
-  - Breadboard and jumper wires.
-- **Software**:
-  - STM32CubeIDE or similar IDE for STM32 development.
-  - STM32 HAL library for GPIO and timer configuration.
-  - (Optional) Oscilloscope or logic analyzer for debugging.
-
-## Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/stm32f767-projects.git
-   ```
-2. Open the project in STM32CubeIDE.
-3. Configure the STM32F767 GPIO pins as specified in the pin configurations.
-4. Connect the hardware components according to the circuit diagrams.
 5. Build and flash the code to the STM32F767 board.
 6. Reset the board to start the selected project.
 
