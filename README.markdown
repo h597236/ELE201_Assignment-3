@@ -91,4 +91,4 @@
 ```
 
 ### Demo Video
-*(Link to demo video will be added here)*
+<video src="media/reaction_game.mp4" controls width="600"></video>
