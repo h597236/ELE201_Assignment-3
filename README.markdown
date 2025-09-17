@@ -92,8 +92,3 @@
 
 ### Demo Video
 *(Link to demo video will be added here)*
-5. Build and flash the code to the STM32F767 board.
-6. Reset the board to start the selected project.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
