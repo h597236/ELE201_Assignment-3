@@ -43,7 +43,8 @@
 ```
 
 ### Demo Video
-*(Link to demo video will be added here)*
+[![Traffic light Demo](https://img.youtube.com/vi/V0Mur8rZCTk/0.jpg)](https://www.youtube.com/watch?v=V0Mur8rZCTk)
+We reduced the delay in the code for the demo, so the video is shorter.
 
 ## Project 2: Reaction Time Game
 
