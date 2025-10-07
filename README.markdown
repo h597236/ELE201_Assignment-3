@@ -1,10 +1,10 @@
-# Assignement - 2
+# Assignement - 3
 
 ## Table of Contents
-- [Project 1: Traffic Light System](#project-1-traffic-light-system)
-- [Project 2: Reaction Time Game](#project-2-reaction-time-game)
+- [Project 1: Temperature Sensor ADC and Serial Output](#project-1-temperature-sensor-adc-and-serial-output)
+- [Project 2: OPPG 2 ENDRE](#project-2-reaction-time-game)
 
-## Project 1: Traffic Light System
+## Project 1: Temperature Sensor ADC and Serial Output
 
 ### Features
 - **Standard Traffic Light Sequence**:
@@ -19,23 +19,14 @@
 ### Pin Configuration
 | Component | Pin | GPIO Port |
 |-----------|-----|-----------|
-| R_LED     | PA5 | GPIO_OUT  |
-| Y_LED     | PA6 | GPIO_OUT  |
-| G_LED     | PA7 | GPIO_OUT  |
-| EXT_BTN   | PA4 | GPIO_IN   |
+| TMP_IN    | PA3 | ADC1_IN3  |
 
 ### Circuit Diagram
 ```
                     STM32F767
                   ┌─────────────┐
                   │             │
-    R_LED     ────┤ PA5         │
-                  │             │
-    Y_LED     ────┤ PA6         │
-                  │             │
-    G_LED     ────┤ PA7         │
-                  │             │
-    EXT_BTN   ────┤ PA4         │
+    TMP_IN    ────┤ PA3         │
                   │             │
                   │         GND ├──── GND
                   │         3V3 ├──── 3.3V
