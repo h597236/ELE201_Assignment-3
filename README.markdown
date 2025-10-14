@@ -24,24 +24,23 @@ Convert the ADC value into voltage and temperature (°C) and transmit the result
 - Updates every 1 second
 
 ### Pin Configuration
-| Signal | MCU Pin | Function     | Notes                |
-|---------|----------|--------------|----------------------|
-| TMP36 OUT | PA3 | ADC1_IN3 | Analog input |
-| GND | GND | — | Common ground |
-| VCC | 3V3 | — | 3.3 V supply |
-| USART3 TX | PD8 | UART output | ST-LINK VCP |
-| USART3 RX | PD9 | UART input  | ST-LINK VCP |
+| Signal | MCU Pin | Function |
+|---------|----------|--------------|
+| TMP36 OUT | PA3 | ADC1_IN3 |
+| USART3 TX | PD8 | UART output |
+| USART3 RX | PD9 | UART input  |
 
 ### Circuit Diagram
 ```
                  STM32F767
                ┌───────────────┐
-     TMP36_OUT ─┤ PA3  (ADC1)  │
-          GND ──┤ GND          │
-          VCC ──┤ 3V3          │
-                 │              │
-       UART_TX ──┤ PD8          │
-       UART_RX ──┤ PD9          │
+    TMP36_OUT ─┤ PA3  (ADC1)   │
+               │               |
+         GND ──┤ GND           │
+         VCC ──┤ 3V3           │
+               │               │
+     UART_TX ──┤ PD8           │
+     UART_RX ──┤ PD9           │
                └───────────────┘
 ```
 
@@ -67,30 +66,12 @@ Two variants may be tested:
 1. **Servo Control** – Potentiometer on PA3 sets the servo’s position.  
 2. **DC Motor Control** – TMP36 temperature sensor on PA3 controls motor speed.
 
-### Features
-#### Option A – Servo Control
-- PWM frequency = 50 Hz  
-- Pulse width = 0.5 ms → 2.5 ms (full servo range)  
-- Maps ADC (0–4095) → 500–2500 µs  
-- Live serial printout of ADC and pulse width
-
-#### Option B – DC Motor Control
-- PWM ≈ 1 kHz (quiet operation possible up to 20 kHz)
-- Duty cycle set by temperature:
-  - ≤ 20 °C → 0 %  
-  - ≥ 30 °C → 100 %
-- Direction control via two GPIO pins (e.g. PB0 / PB1 for H-bridge)
-- Serial output: temperature and PWM duty %
-
 ### Pin Configuration
 | Component | MCU Pin | Function     | Notes |
 |------------|----------|--------------|-------|
-| Pot/TMP36 OUT | PA3 | ADC1_IN3 | Analog input |
+| Pot. Meter IN | PA3 | ADC1_IN10 | Analog input |
+| TMP36 IN | PC0 | ADC1_IN3 | Analog input |
 | Servo signal / Motor ENA | PA6 | TIM3_CH1 (PWM) | PWM output |
-| Motor IN1 | PB0 | GPIO_OUT | Direction |
-| Motor IN2 | PB1 | GPIO_OUT | Direction |
-| UART TX | PD8 | USART3 TX | Serial output |
-| UART RX | PD9 | USART3 RX | Serial input |
 
 ### Circuit Diagram (Servo example)
 ```
@@ -104,12 +85,6 @@ Servo         ─┤ PA6 (TIM3)    │
         3.3V ──┤ 3.3V          |
        Servo ──┤ 5V            |
                └───────────────┘
-```
-
-### Serial Output Example
-```
-ADC: 3050, Pulse: 1880 µs
-tempC: 25.3, duty: 53.0 %
 ```
 
 ### Demo Video
