@@ -1,5 +1,4 @@
 # ELE201 – Assignment 3  
-**Microcontroller Programming with STM32F767**
 
 ## Table of Contents
 - [Exercise 1: Temperature Sensor ADC and Serial Output](#exercise-1-temperature-sensor-adc-and-serial-output)
@@ -59,12 +58,7 @@ sensorVal: 2480, sensorVolt: 2.00 V, temperature: 150.0 °C
 
 ### Objective
 Use the STM32’s timer to generate a PWM signal on **PA6 (TIM3_CH1)**.  
-The duty cycle or pulse width depends on an analog input read via **PA3 (ADC1_IN3)**.
-
-Two variants may be tested:
-
-1. **Servo Control** – Potentiometer on PA3 sets the servo’s position.  
-2. **DC Motor Control** – TMP36 temperature sensor on PA3 controls motor speed.
+The duty cycle or pulse width depends on an analog input read via **PA3 (ADC1_IN3)** or **PC0 (ADC1_IN10)**..
 
 ### Pin Configuration
 | Component | MCU Pin | Function     | Notes |
@@ -89,19 +83,3 @@ Servo         ─┤ PA6 (TIM3)    │
 
 ### Demo Video
 [![Exercise 2 Demo](https://img.youtube.com/vi/VIDEO_ID_2/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_2)
-
----
-
-## Tools / Environment
-- **Board**: STM32F767 (Nucleo or Discovery)
-- **IDE**: STM32CubeIDE / CubeMX (HAL drivers)
-- **Language**: C (HAL API)
-- **Baud Rate**: 115200 bps
-- **Supply Voltage**: 3.3 V
-
----
-
-## References
-- ELE201 Lab 3 – Microcontroller I/O and PWM control  
-- ST Microelectronics – STM32F7 Reference Manual  
-- Analog Devices TMP36 Datasheet
