@@ -96,13 +96,13 @@ Two variants may be tested:
 ```
                  STM32F767
                ┌───────────────┐
-   Potentiometer ─┤ PA3 (ADC1) │
-       Servo SIG ─┤ PA6 (TIM3) │
-            GND ──┤ GND        │
-            3V3 ──┤ 3V3        │
-                 │              │
-        UART_TX ─┤ PD8          │
-        UART_RX ─┤ PD9          │
+TMP36         ─| PA3 (ADC1)    │
+Pot. meter    ─| PC0 (ADC1)    │
+Servo         ─┤ PA6 (TIM3)    │
+               |               |
+         GND ──┤ GND           │
+        3.3V ──┤ 3.3V          |
+       Servo ──┤ 5V            |
                └───────────────┘
 ```
 
