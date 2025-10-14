@@ -58,7 +58,10 @@ sensorVal: 2480, sensorVolt: 2.00 V, temperature: 150.0 °C
 
 ### Objective
 Use the STM32’s timer to generate a PWM signal on **PA6 (TIM3_CH1)**.  
-The duty cycle or pulse width depends on an analog input read via **PA3 (ADC1_IN3)** or **PC0 (ADC1_IN10)**..
+The duty cycle or pulse width depends on an analog input read via **PA3 (ADC1_IN3)** or **PC0 (ADC1_IN10)**
+
+The angle is controlled by the potentiometer, and the speed of turning is decided by the temperature. 
+Higher temperature means faster turning and lower means slower.
 
 ### Pin Configuration
 | Component | MCU Pin | Function     | Notes |
