@@ -69,8 +69,8 @@ Two variants may be tested:
 ### Pin Configuration
 | Component | MCU Pin | Function     | Notes |
 |------------|----------|--------------|-------|
-| Pot. Meter IN | PA3 | ADC1_IN10 | Analog input |
-| TMP36 IN | PC0 | ADC1_IN3 | Analog input |
+| Pot. Meter IN | PC0 | ADC1_IN10 | Analog input |
+| TMP36 IN | PA3 | ADC1_IN3 | Analog input |
 | Servo signal / Motor ENA | PA6 | TIM3_CH1 (PWM) | PWM output |
 
 ### Circuit Diagram (Servo example)
