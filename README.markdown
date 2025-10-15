@@ -25,21 +25,21 @@ Convert the ADC value into voltage and temperature (°C) and transmit the result
 ### Pin Configuration
 | Signal | MCU Pin | Function |
 |---------|----------|--------------|
-| TMP36 OUT | PA3 | ADC1_IN3 |
-| USART3 TX | PD8 | UART output |
-| USART3 RX | PD9 | UART input  |
+| TMP36_IN | PA3 | ADC1_IN3 |
+| USART3_TX | PD8 | UART output |
+| USART3_RX | PD9 | UART input  |
 
 ### Circuit Diagram
 ```
                  STM32F767
                ┌───────────────┐
-    TMP36_OUT ─┤ PA3  (ADC1)   │
+    TMP36_IN  ─┤ PA3  (ADC1)   │
                │               |
          GND ──┤ GND           │
          VCC ──┤ 3V3           │
                │               │
-     UART_TX ──┤ PD8           │
-     UART_RX ──┤ PD9           │
+   USART3_TX ──┤ PD8           │
+   USART3_RX ──┤ PD9           │
                └───────────────┘
 ```
 
@@ -50,11 +50,11 @@ sensorVal: 2480, sensorVolt: 2.00 V, temperature: 150.0 °C
 ```
 
 ### Demo Video
-[![Exercise 1 Demo](https://img.youtube.com/vi/VIDEO_ID_1/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_1)
+[![Exercise 1 Demo](https://img.youtube.com/vi/Ec9VKAoGJDY/0.jpg)](https://www.youtube.com/watch?v=Ec9VKAoGJDY)
 
 ---
 
-## Exercise 2: Servo or DC Motor Control Using PWM
+## Exercise 2: Servo Control Using PWM
 
 ### Objective
 Use the STM32’s timer to generate a PWM signal on **PA6 (TIM3_CH1)**.  
@@ -66,17 +66,17 @@ Higher temperature means faster turning and lower means slower.
 ### Pin Configuration
 | Component | MCU Pin | Function     | Notes |
 |------------|----------|--------------|-------|
-| Pot. Meter IN | PC0 | ADC1_IN10 | Analog input |
-| TMP36 IN | PA3 | ADC1_IN3 | Analog input |
-| Servo signal / Motor ENA | PA6 | TIM3_CH1 (PWM) | PWM output |
+| POT_IN | PC0 | ADC1_IN10 | Analog input |
+| TMP36_IN | PA3 | ADC1_IN3 | Analog input |
+| SERVO | PA6 | TIM3_CH1 (PWM) | PWM output |
 
 ### Circuit Diagram (Servo example)
 ```
                  STM32F767
                ┌───────────────┐
-TMP36         ─| PA3 (ADC1)    │
-Pot. meter    ─| PC0 (ADC1)    │
-Servo         ─┤ PA6 (TIM3)    │
+TMP36_IN      ─| PA3 (ADC1)    │
+POT_IN        ─| PC0 (ADC1)    │
+SERVO         ─┤ PA6 (TIM3)    │
                |               |
          GND ──┤ GND           │
         3.3V ──┤ 3.3V          |
@@ -85,4 +85,4 @@ Servo         ─┤ PA6 (TIM3)    │
 ```
 
 ### Demo Video
-[![Exercise 2 Demo](https://img.youtube.com/vi/VIDEO_ID_2/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_2)
+[![Exercise 2 Demo](https://img.youtube.com/vi/x_SAdGacyXI/0.jpg)](https://www.youtube.com/watch?v=x_SAdGacyXI)
